@@ -10,7 +10,7 @@ This application is an API for a social network enabling users to create thought
 
 Clone the code from the repo and run `npm install` in terminal. Then run `node index.js` in terminal and you can connect to Insomnia for testing.
 
-[Link To Video]()
+[Link To Video](https://watch.screencastify.com/v/0OroWXi4mJ7IJEX1shpN)
 
 ## Usage
 
