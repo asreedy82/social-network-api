@@ -19,6 +19,12 @@ const reactionSchema = new Schema(
             type: Date,
             default: Date.now,
         }
+    },
+    {
+        toJSON: {
+            virtuals: true,
+        },
+        id: false,
     }
 )
 
@@ -52,6 +58,14 @@ thoughtSchema
     .virtual('reactionCount').get(function () {
         return this.reactions.length;
     });
+thoughtSchema
+    .virtual('thoughtDate').get(function () {
+        return this.createdAt.toLocaleString();
+    });
+reactionSchema
+    .virtual('reactionDate').get(function () {
+        return this.createdAt.toLocaleString();
+    })
 
 const Thought = model('thought', thoughtSchema);
 
